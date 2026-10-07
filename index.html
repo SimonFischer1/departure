@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#05070a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Departure — Simon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page-shell">
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">S</span><span>DEPARTURE<span class="brand-dot">.</span></span></a>
+  <button class="menu-btn" id="menuBtn" aria-label="Menü"><span></span><span></span></button>
+</header>
+
+<main>
+<section class="hero">
+  <img class="hero-image" src="pic/cover.jpeg" alt="Kreuzfahrtschiff auf dem Meer">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="eyebrow"><span></span> MY JOURNEY</div>
+    <h1>Next stop:<br><em>New horizons.</em></h1>
+    <p>Von Rotterdam aufs Schiff. Tag für Tag näher zurück nach Hause.</p>
+    <div class="hero-stats">
+      <div><strong id="daysRemaining">—</strong><span>TAGE ÜBRIG</span></div>
+      <div><strong id="progressPercent">—%</strong><span>REISE FORTSCHRITT</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="today-strip">
+  <div><span class="label">HEUTE</span><strong id="todayLabel">—</strong></div>
+  <div class="today-status" id="todayStatus">—</div>
+</section>
+
+<section class="date-nav">
+  <div class="section-kicker">DEINE TAGE</div>
+  <div class="date-track" id="dateTrack"></div>
+</section>
+
+<section class="timeline-section">
+  <div class="section-heading">
+    <div>
+      <div class="eyebrow"><span></span> TIMELINE</div>
+      <h2>Every day<br><em>counts.</em></h2>
+    </div>
+    <button class="today-btn" id="todayBtn">Heute</button>
+  </div>
+  <div class="timeline" id="timeline"></div>
+</section>
+
+<section class="feature-card">
+  <img src="pic/adventure.jpg" alt="" aria-hidden="true">
+  <div class="feature-overlay"></div>
+  <div class="feature-content">
+    <span class="label">THE JOURNEY</span>
+    <h2>Ein Kapitel.<br>Viele Geschichten.</h2>
+    <button class="arrow-btn" id="jumpToday" aria-label="Zum heutigen Tag">↗</button>
+  </div>
+</section>
+</main>
+
+<nav class="bottom-nav" aria-label="Navigation">
+  <a class="active" href="#timeline"><span>⌂</span><small>Reise</small></a>
+  <a href="#timeline"><span>◫</span><small>Timeline</small></a>
+  <a href="#"><span>⌁</span><small>Karte</small></a>
+  <a href="#"><span>○</span><small>Profil</small></a>
+</nav>
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-menu" id="closeMenu">×</button>
+  <div class="menu-eyebrow">DEPARTURE</div>
+  <a href="#timeline">Timeline</a>
+  <a href="#">Reise</a>
+  <a href="#">Über diese Reise</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
