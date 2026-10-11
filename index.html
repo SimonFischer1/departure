@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#050a14">
+<title>Departure</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <figure class="photo frame">
+    <img id="bild" alt="" src="pic/cover.jpeg">
+    <div class="shade"></div>
+    <div class="tag"><i></i><span id="schiff"></span></div>
+    <svg class="wave" viewBox="0 0 400 26" preserveAspectRatio="none" aria-hidden="true"><path d="M0 14C50 0 100 26 150 13S250 0 300 13s80 12 100 3V26H0z"/><path d="M0 14C50 0 100 26 150 13S250 0 300 13s80 12 100 3"/></svg>
+  </figure>
+  <div class="txt">
+    <h1 id="titel"></h1>
+    <p class="lead" id="untertitel"></p>
+    <div class="gauge" role="progressbar" aria-label="Fortschritt der Reise" id="gauge">
+      <svg viewBox="-110 -110 220 220" aria-hidden="true">
+        <g id="ticks"></g>
+        <circle r="76" fill="rgba(10,20,36,.8)" stroke="rgba(90,169,255,.18)" stroke-width="6"/>
+        <circle id="arc" r="76" fill="none" stroke="#1688ff" stroke-width="6" stroke-linecap="round" transform="rotate(-90)" stroke-dasharray="0 478"/>
+        <circle id="end" r="6" fill="#ff6a2b" stroke="#050a14" stroke-width="3" cx="0" cy="-76"/>
+      </svg>
+      <div class="mid"><span class="num" id="tage">–</span><span class="unit" id="zaehlerText"></span></div>
+    </div>
+    <p class="meta" id="meta"></p>
+  </div>
+</header>
+
+<div class="two">
+<section>
+  <h2>Die Route</h2>
+  <p class="sub" id="status"></p>
+  <div class="chart frame">
+    <svg id="chart" viewBox="0 0 360 250" role="img" aria-label="Routenkarte mit Schiffsposition">
+      <defs><pattern id="g" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="#1688ff" stroke-opacity=".12"/></pattern></defs>
+      <rect width="360" height="250" fill="url(#g)"/>
+      <g transform="translate(318 40)" opacity=".7"><circle r="24" fill="none" stroke="#5aa9ff" stroke-opacity=".5"/><path d="M0-24L5 0 0 24-5 0z" fill="#5aa9ff"/><path d="M-24 0L0-5 24 0 0 5z" fill="#5aa9ff" fill-opacity=".45"/><text y="-29" text-anchor="middle" font-size="9" font-weight="700">N</text></g>
+      <path d="M0 226q30-10 60 0t60 0 60 0 60 0 60 0 60 0" fill="none" stroke="#1688ff" stroke-opacity=".25"/>
+      <path d="M0 238q30-10 60 0t60 0 60 0 60 0 60 0 60 0" fill="none" stroke="#1688ff" stroke-opacity=".15"/>
+      <path id="rp" d="M34 176C90 56 150 232 210 132S300 44 326 92" fill="none" stroke="#5aa9ff" stroke-opacity=".5" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round"/>
+      <path id="rd" d="M34 176C90 56 150 232 210 132S300 44 326 92" fill="none" stroke="#1688ff" stroke-width="3.5" stroke-linecap="round"/>
+      <g id="pts"></g>
+      <g id="ship"><circle r="13" fill="#ff6a2b" fill-opacity=".22"><animate attributeName="r" values="9;18;9" dur="2.6s" repeatCount="indefinite"/></circle><path d="M-10 -6H8L12 0 8 6H-10L-7 0z" fill="#ff6a2b" stroke="#050a14" stroke-width="2" stroke-linejoin="round"/></g>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <div class="head"><h2>Reiseverlauf</h2><button class="btn" id="heute" type="button">Zu heute</button></div>
+  <p class="sub">Jede Station auf einen Blick.</p>
+  <ol class="route" id="route"></ol>
+</section>
+</div>
+<footer class="foot">Orte, Daten und Texte stehen in <b>config.js</b>.</footer>
+</div>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
