@@ -14,3 +14,4 @@ window.REISE={
    {datum:"2026-12-05",kurz:"Ankunft",icon:"flagge",titel:"Von Bord gehen",text:"Voraussichtlich endet die Schiffsreise heute.",ort:"Zielhafen · noch offen",badge:"Voraussichtlich",heute:"Heute voraussichtlich von Bord.",status:"Die Reise ist abgeschlossen."}
   ]
 };
+
