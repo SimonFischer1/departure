@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Heimkehr">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<title>Departure</title>
+<link rel="stylesheet" href="style.css?v=20261026">
+</head>
+<body>
+<main class="wrap">
+
+<section class="scan" aria-labelledby="titel">
+  <p class="ship"><i class="dot"></i><span id="schiff"></span></p>
+  <h1 id="titel"></h1>
+  <p class="lead" id="untertitel"></p>
+
+  <div class="radar" id="radar">
+    <i class="ring r1"></i><i class="ring r2"></i><i class="ring r3"></i>
+    <div class="sprite blink" id="sprite" role="img" aria-label="Pixel-Maske, die blinkt"></div>
+  </div>
+
+  <div class="read" aria-live="polite">
+    <div class="count"><span class="num" id="tage">–</span><span class="unit" id="zaehlerText"></span></div>
+    <div class="bars" id="bars" aria-hidden="true"></div>
+    <p class="status" id="status"></p>
+    <p class="rate" id="rate"></p>
+  </div>
+</section>
+
+<section class="test">
+  <div class="testhead"><h2>Signal testen</h2><span class="pill" id="pill" hidden>Vorschau</span></div>
+  <p class="sub">Zieh den Regler und sieh, wie das Blinken schneller wird.</p>
+  <input type="range" id="slider" min="0" max="100" value="0" step="1" aria-label="Abstand simulieren">
+  <div class="ends"><span>Abreise</span><span>Ankunft</span></div>
+  <button class="btn" id="live" type="button" hidden>Echten Stand zeigen</button>
+</section>
+
+<section class="track-sec">
+  <h2>Die Route</h2>
+  <div class="track" id="track"></div>
+</section>
+
+<section>
+  <div class="head"><h2>Reiseverlauf</h2><button class="btn" id="heute" type="button">Zu heute</button></div>
+  <ol class="route" id="route"></ol>
+</section>
+
+<footer class="foot">Orte, Daten und Texte stehen in <b>config.js</b>.</footer>
+</main>
+<script src="config.js?v=20261026"></script>
+<script src="script.js?v=20261026"></script>
+</body>
+</html>
