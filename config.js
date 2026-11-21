@@ -68,7 +68,7 @@ stops:[
 
   /* ── Station 1: Abreise ── */
   {
-    datum:  "2026-09-04",            // ◄ Datum
+    datum:  "2026-09-03",            // ◄ Datum
     kurz:   "Abreise",               //   Kurzname auf dem Zeitstrahl
     icon:   "flug",
     titel:  "Abreise nach Rotterdam",
